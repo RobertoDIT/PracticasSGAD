@@ -10,7 +10,7 @@ pipeline {
     }
     stage('desplegar') {
       steps {
-          deploy adapters: [tomcat7(path: '', url: 'http://localhost:8081')], contextPath: '/', war: 'JenkinsJSF-0.0.1-SNAPSHOT.war'
+          deploy adapters: [tomcat7(path: '', url: 'http://localhost:8081')], contextPath: '/PracticasSGAD_master/', war: 'JenkinsJSF-0.0.1-SNAPSHOT.war'
       }
     }    
   }
