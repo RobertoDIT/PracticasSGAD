@@ -6,9 +6,12 @@ pipeline {
         withMaven(maven: 'Maven-1') {
           bat 'mvn clean install -DskipTests=true'
         }
-
       }
     }
-
+    stage('desplegar') {
+      steps {
+          deploy adapters: [tomcat7(path: '', url: 'http://localhost:8081')], contextPath: '/', war: 'JenkinsJSF-0.0.1-SNAPSHOT.war'
+      }
+    }    
   }
 }
