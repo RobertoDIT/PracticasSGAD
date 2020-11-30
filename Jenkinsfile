@@ -10,7 +10,7 @@ pipeline {
     }
     stage('desplegar') {
       steps {
-        deploy adapters: [tomcat7(credentialsId: '40aa2f7f-ac43-4d11-95a9-30964c40f24b', path: '', url: 'http://localhost:8081')], contextPath: 'JenkinsJSF', war: '**/*.war'  
+        deploy adapters: [tomcat7(credentialsId: '40aa2f7f-ac43-4d11-95a9-30964c40f24b', path: '', url: 'http://localhost:8081')], contextPath: 'JenkinsJSF', war: 'C:/Users/irbis/.m2/repository/JenkinsJSF/JenkinsJSF/0.0.1-SNAPSHOT/JenkinsJSF-0.0.1-SNAPSHOT.war'  
       }
     }    
   }
